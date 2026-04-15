@@ -32,7 +32,7 @@ using Unity.VisualScripting;
  */
 
 
-public class LevelParser : MonoBehaviour
+public class AC_LevelParserTest : MonoBehaviour
 {
     public TextAsset levelFile;
     public Transform levelRoot;

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerAnimation : MonoBehaviour
+public class AC_PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     private string currentAnim;
