@@ -3,10 +3,12 @@ using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IBookwormParent
 {
+    public static Player Instance { get; private set; }  //property for singleton pattern
     
     [SerializeField] private GameInput gameInput;
+    [SerializeField] private Transform bookwormHoldPoint;
     //movement default numbers
     [SerializeField] private float baseMoveSpeed = 7f;
     [SerializeField] private float ladderMoveSpeed = 2f;
@@ -29,41 +31,22 @@ public class Player : MonoBehaviour
     private float _jumpVelocity;
     private float _verticalVelocity;
     
+    private Bookworm _bookworm;
+    
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Debug.LogError("There are multiple instances of the player");
+        }
+        Instance = this;
+    }
     
     void Start()
     {
         gameInput.OnJump += GameInput_OnJump;
         gameInput.OnDash += GameInput_OnDash;
         gameInput.OnDrop += GameInput_OnDrop;
-    }
-
-    private void GameInput_OnDrop(object sender, EventArgs e)
-    {
-        _dropping =  true;
-    }
-
-    private void GameInput_OnDash(object sender, EventArgs e)
-    {
-        _dashActive = true;
-        _dashTimer = 0f;
-    }
-
-    private void GameInput_OnJump(object sender, EventArgs e)
-    {
-        if (_canJump)
-        {
-            //Debug.Log("Player_Jump");
-            _jumpVelocity = 2f * apexHeight / apexTime;
-            _canJump = false;
-            _canDoubleJump = true;
-        }
-        else if (_canDoubleJump)
-        {
-            //Debug.Log("Player_DoubleJump");
-            _jumpVelocity = 2f * apexHeight / apexTime;
-            _canJump = false;
-            _canDoubleJump = false;
-        }
     }
 
     // Update is called once per frame
@@ -129,6 +112,35 @@ public class Player : MonoBehaviour
         ClampPosition();
     }
     
+    
+    private void GameInput_OnDrop(object sender, EventArgs e)
+    {
+        _dropping =  true;
+    }
+
+    private void GameInput_OnDash(object sender, EventArgs e)
+    {
+        _dashActive = true;
+        _dashTimer = 0f;
+    }
+
+    private void GameInput_OnJump(object sender, EventArgs e)
+    {
+        if (_canJump)
+        {
+            //Debug.Log("Player_Jump");
+            _jumpVelocity = 2f * apexHeight / apexTime;
+            _canJump = false;
+            _canDoubleJump = true;
+        }
+        else if (_canDoubleJump)
+        {
+            //Debug.Log("Player_DoubleJump");
+            _jumpVelocity = 2f * apexHeight / apexTime;
+            _canJump = false;
+            _canDoubleJump = false;
+        }
+    }
 
     private void ClampPosition()
     {
@@ -150,6 +162,41 @@ public class Player : MonoBehaviour
         }
         
         transform.position = clampedPosition;
+    }
+    
+    
+    
+    
+    //Bookworm Holding information
+    public Transform GetBookwormTransform()
+    {
+        return bookwormHoldPoint;
+    }
+
+    public void SetBookworm(Bookworm bookworm)
+    {
+        _bookworm = bookworm;
+
+        if (_bookworm != null)
+        {
+            //TODO: Finish Player SetBookworm
+            //OnPickedSomething?.Invoke(this, EventArgs.Empty);
+        }
+    }
+
+    public Bookworm GetBookworm()
+    {
+        return _bookworm;
+    }
+
+    public void ClearBookworm()
+    {
+        _bookworm = null;
+    }
+
+    public bool HasBookworm()
+    {
+        return _bookworm != null;
     }
     
 }
