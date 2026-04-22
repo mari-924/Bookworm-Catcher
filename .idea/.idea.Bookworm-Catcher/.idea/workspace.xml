@@ -7,13 +7,17 @@
     <list default="true" id="515b1211-564e-4bf5-9b47-24703bcafae7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bookworm-Catcher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bookworm-Catcher/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AR-Prefabs/BaseBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AR-Prefabs/BaseBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AR-Prefabs/ThinBaseBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AR-Prefabs/ThinBaseBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AR-Prefabs/ThinBaseBlock.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AR-Prefabs/ThinBaseBlock.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AC-Scenes/AlyssaPracticeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AC-Scenes/AlyssaPracticeScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/AR-Scenes/ARTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AR-Scenes/ARTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AR/LevelParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AR/LevelParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AR/TestingLevel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AR/TestingLevel.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/NC/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/NC/PlayerInputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NC/NatTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NC/NatTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NC/GameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NC/GameInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NC/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NC/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/NC/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/NC/PlayerInputActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +46,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "AndrewRyer-test",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -115,6 +120,7 @@
       <workItem from="1776729667861" duration="4974000" />
       <workItem from="1776818492430" duration="1194000" />
       <workItem from="1776823651949" duration="2410000" />
+      <workItem from="1776828541825" duration="2849000" />
     </task>
     <servers />
   </component>
