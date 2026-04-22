@@ -9,8 +9,21 @@ public class WormPatrol : MonoBehaviour
 
     [SerializeField] private Transform groundDetection;
 
+
+    public enum StateMachine
+    {
+        Patrol,
+        Climb,
+        Caught
+    }
+
+    public StateMachine currentState;
+
+
     private void Start()
     {
+        currentState = StateMachine.Patrol;
+
         // Start worm facing left if movingRight is disabled in the editor when the game starts
         if (!movingRight)
         {
@@ -19,6 +32,22 @@ public class WormPatrol : MonoBehaviour
     }
 
     private void Update()
+    {
+        switch (currentState)
+        {
+            case StateMachine.Patrol:
+                Patrol();
+                break;
+            case StateMachine.Climb:
+                Climb();
+                break;
+            case StateMachine.Caught:
+                Caught();
+                break;
+        }
+    }
+
+    private void Patrol()
     {
         // Moves worm
         transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -30,7 +59,7 @@ public class WormPatrol : MonoBehaviour
         // Changes direction when ground ends
         if (groundInfo.collider == false)
         {
-            Debug.Log("Floor not detected");
+            // Debug.Log("Floor not detected");
             if (movingRight)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
@@ -58,5 +87,15 @@ public class WormPatrol : MonoBehaviour
         //         }
         //     }
         // }
+    }
+
+    private void Climb()
+    {
+        
+    }
+
+    private void Caught()
+    {
+        
     }
 }
