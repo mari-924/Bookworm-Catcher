@@ -980,6 +980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa717390d6ecf64983e1a81221a663a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  mainMenuSceneIndex: 0
+  gameplaySceneIndex: 1
 --- !u!114 &1607293986
 MonoBehaviour:
   m_ObjectHideFlags: 0

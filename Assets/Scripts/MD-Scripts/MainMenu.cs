@@ -3,15 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private int firstLevelSceneIndex = 1;
+    [SerializeField] private int optionsSceneIndex = 2;
 
     //Goes to the first level game scene
    public void StartGame(){
-    SceneManager.LoadSceneAsync(3);
+    SceneManager.LoadSceneAsync(firstLevelSceneIndex);
    }
 
     //Goes to the options menu scene
    public void OpenOptions(){
-    SceneManager.LoadSceneAsync(2);
+    SceneManager.LoadSceneAsync(optionsSceneIndex);
    }
 
     //Closes the game

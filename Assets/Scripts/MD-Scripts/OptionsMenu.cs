@@ -4,9 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class OptionsMenu : MonoBehaviour
 {
+    [SerializeField] private int mainMenuSceneIndex = 0;
+    [SerializeField] private int gameplaySceneIndex = 1;
 
-    //Exits the options menu and goes back to the main menu
-   public void BackToMainMenu(){
-    SceneManager.LoadSceneAsync(0);
-   }
+    // Use this for the Options button opened from Main Menu.
+    public void BackToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadSceneAsync(mainMenuSceneIndex);
+    }
+
+    // Use this for the Options button opened from Pause Menu.
+    public void BackToPausedGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadSceneAsync(gameplaySceneIndex);
+    }
 }
