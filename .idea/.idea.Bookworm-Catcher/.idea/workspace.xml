@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="515b1211-564e-4bf5-9b47-24703bcafae7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bookworm-Catcher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bookworm-Catcher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AR-Prefabs/Bookworm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AR-Prefabs/Bookworm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FinalGame/Level1_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FinalGame/Level1_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AR/TestingLevel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AR/TestingLevel.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Alyssa/AC_PlayerAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Alyssa/AC_PlayerAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NC/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NC/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NH-Scripts/AITest2/WormPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NH-Scripts/AITest2/WormPatrol.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +108,7 @@
       <workItem from="1776729667861" duration="4974000" />
       <workItem from="1776818492430" duration="4021000" />
       <workItem from="1776962937702" duration="4286000" />
+      <workItem from="1776987296935" duration="393000" />
     </task>
     <servers />
   </component>
