@@ -52,6 +52,22 @@ public class Player : MonoBehaviour, IBookwormParent
     }
 
     // Update is called once per frame
+    
+    /*
+     * Notes:
+     * While falling too fast you sink into the platform
+     * After sinking, the y-level that you sink to becomes the new y-level for future jumps on that platform
+     * 
+     * Proposed fix:
+     * Reset the y-position of the player to be ON level with the platform
+     * once it reaches below the y-threshold of the platform
+     *
+     * Temp changes / fixes for level parser implimentation:
+     * I had to change the Raycast to be longer to scale with the larger size of the player sprite
+     * I added a colored Raycast for debugging, so we know the length of the Physics2D.Raycast
+     * 
+    */
+
     void FixedUpdate()
     {
         float currentMoveSpeed = baseMoveSpeed;

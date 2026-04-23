@@ -1,26 +1,33 @@
 
 
 
+     t
+     u                      w
+     u          lxxxxxxxxxxxxxxxxxxxxxxr
+     u
+     u
+     u
+     u
+lxr  u
+     u
+     u
+     u                  w
+     u              lxxxxxxxr
+     u              
+     b
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     lxxxxxxr
-
-lxxxtr
-    u         w
-    u       lxxxxr
-    b
-lxxxxxxxxxxxxxxxxxxxxr
+            lxr                     w
+  w                             lxxxxxxr
+ lxr                    t
+                        u
+                        u
+                        u
+         w              u
+     lxxxxxxr           u
+                        u
+  w                     u
+lxxrt                   u     w
+    u                   u   lxxr
+    u                   u   
+    b                   b
+lxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr
