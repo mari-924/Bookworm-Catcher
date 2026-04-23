@@ -717,7 +717,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1607293985}
         m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
-        m_MethodName: BackToMainMenu
+        m_MethodName: BackToPausedGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
