@@ -1403,6 +1403,8 @@ MonoBehaviour:
   soundEffectVolumeButton: {fileID: 1802541899}
   musicVolumeText: {fileID: 412907696}
   soundEffectVolumeText: {fileID: 1781773366}
+  mainMenuSceneIndex: 0
+  gameplaySceneIndex: 1
 --- !u!114 &1607293986
 MonoBehaviour:
   m_ObjectHideFlags: 0

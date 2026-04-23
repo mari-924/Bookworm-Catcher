@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MD-Scenes/MainMenu.unity
     guid: 62a4f9f4fcaf31c419f05f2a64c04e2c
   - enabled: 1
-    path: Assets/Scenes/MD-Scenes/Test.unity
-    guid: 16dd43d83f94552488d3b7d200b5962e
+    path: Assets/Scenes/FinalGame/Level1_Scene.unity
+    guid: 773bbc793483a304aaa170c3a3085698
   - enabled: 1
     path: Assets/Scenes/MD-Scenes/SettingsPage.unity
     guid: 792b0df78bcbb974d820e1dffdaa7e69
+  - enabled: 1
+    path: Assets/Scenes/MD-Scenes/Test.unity
+    guid: 16dd43d83f94552488d3b7d200b5962e
   - enabled: 1
     path: Assets/Scenes/NC/NatTestScene.unity
     guid: 77062533c4d715f49b178fa1745598a8
