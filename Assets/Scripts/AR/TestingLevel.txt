@@ -26,8 +26,8 @@ lxr  u
      lxxxxxxr           u
                         u
   w                     u
-lxxrt                   u     w
-    u                   u   lxxr
+lxxxr                   u     w
+    t                   u   lxxr
     u                   u   
     b                   b
 lxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxr
