@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 3607092284200655015}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,11 +309,6 @@ MonoBehaviour:
   groundLevel: 0
   leftWall: 0
   rightWall: 18
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  footOffset: 0.5
-  skin: 0.02
 --- !u!95 &2225439702497066304
 Animator:
   serializedVersion: 7
