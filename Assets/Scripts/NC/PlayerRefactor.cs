@@ -3,10 +3,10 @@ using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
-public class Player : MonoBehaviour, IBookwormParent
+public class PlayerRefactor : MonoBehaviour, IBookwormParent
 {
     public event EventHandler OnCaughtBookworm;
-    public static Player Instance { get; private set; }  //property for singleton pattern
+    public static PlayerRefactor Instance { get; private set; }  //property for singleton pattern
     
     [SerializeField] private GameInput gameInput;
     [SerializeField] private Transform bookwormHoldPoint;
@@ -55,6 +55,8 @@ public class Player : MonoBehaviour, IBookwormParent
     private float _verticalVelocity;
     
     private Bookworm _bookworm;
+    private Rigidbody2D _rb;
+    private GameObject _player;
     
     private void Awake()
     {
@@ -65,6 +67,7 @@ public class Player : MonoBehaviour, IBookwormParent
         }
         Instance = this;
         
+        _rb = GetComponent<Rigidbody2D>();
     }
     
     void Start()
@@ -79,24 +82,8 @@ public class Player : MonoBehaviour, IBookwormParent
         currentState = State.Idle;
         //---------------
     }
-
-    // Update is called once per frame
     
-    /*
-     * Notes:
-     * While falling too fast you sink into the platform
-     * After sinking, the y-level that you sink to becomes the new y-level for future jumps on that platform
-     * 
-     * Proposed fix:
-     * Reset the y-position of the player to be ON level with the platform
-     * once it reaches below the y-threshold of the platform
-     *
-     * Temp changes / fixes for level parser implimentation:
-     * I had to change the Raycast to be longer to scale with the larger size of the player sprite
-     * I added a colored Raycast for debugging, so we know the length of the Physics2D.Raycast
-     * 
-    */
-
+    
     void FixedUpdate()
     {
         float currentMoveSpeed = baseMoveSpeed;
@@ -115,7 +102,7 @@ public class Player : MonoBehaviour, IBookwormParent
         //check for on ladder
         _onLadder = Physics2D.Raycast(transform.position, Vector2.down, .05f, LayerMask.GetMask("Ladder"));
         //check for on ground/jump capability
-        _isGrounded = Physics2D.Raycast(transform.position, Vector3.down, 1.01f, LayerMask.GetMask("GroundLayer"));
+        _isGrounded = Physics2D.Raycast(transform.position, Vector3.down, 0.1f, LayerMask.GetMask("GroundLayer"));
         Debug.DrawRay(transform.position, Vector2.down * 1.01f, Color.red);
         _canJump = _isGrounded || _onLadder;
         
@@ -147,16 +134,22 @@ public class Player : MonoBehaviour, IBookwormParent
         
         float yVelocity = _jumpVelocity + _verticalVelocity;
         float deltaY = yVelocity * Time.deltaTime;
-
+        
+        //Debug.Log("Dropping: " + _dropping);
         if (_dropping)
         {
-            deltaY = -dropMoveSpeed * gravity * Time.deltaTime;
-            _dropping = false;
+            float dropVelocity = -dropMoveSpeed * gravity * Time.deltaTime;
+            deltaY = dropVelocity;
+            if (_isGrounded && !Mathf.Approximately(deltaY, dropVelocity))
+            {
+                _dropping = false;
+            }
         }
         
-        transform.position += new Vector3(deltaX, deltaY, 0);
+        Vector3 deltaPosition = new Vector3(deltaX, deltaY, 0);
+        _rb.MovePosition(transform.position + deltaPosition);
 
-        Debug.Log(_isGrounded);
+        //Debug.Log(_isGrounded);
         ClampPosition();
 
         //---------Moises---------
@@ -165,10 +158,22 @@ public class Player : MonoBehaviour, IBookwormParent
         previousState = currentState;
         //------------------------
     }
-    
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ladder"))
+        {
+            _onLadder = true;
+        }
+        else
+        {
+            _onLadder = false;
+        }
+    }
     
     private void GameInput_OnDrop(object sender, EventArgs e)
     {
+        //Debug.Log("PlayerRefactor_Dropping");
         _dropping =  true;
     }
 
@@ -184,7 +189,6 @@ public class Player : MonoBehaviour, IBookwormParent
 
     private void GameInput_OnJump(object sender, EventArgs e)
     {
-        Debug.Log("Jump");
         if (_canJump)
         {
             //Debug.Log("Player_Jump");
@@ -230,7 +234,16 @@ public class Player : MonoBehaviour, IBookwormParent
         
         transform.position = clampedPosition;
     }
-    
+
+    public bool IsDropping()
+    {
+        return _dropping;
+    }
+
+    public void SetIsDropping(bool value)
+    {
+        _dropping = value;
+    }
     
     
     

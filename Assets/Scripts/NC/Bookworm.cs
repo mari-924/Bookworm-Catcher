@@ -24,6 +24,12 @@ public class Bookworm : MonoBehaviour
     
     public void SetObjectParent(IBookwormParent parent)
     {
+        if (parent.HasBookworm())
+        {
+            //parent already has bookworm, should not be able to pick up more than one
+            return;
+        }
+        
         //clear previous parent
         if (_parent != null)
         {
