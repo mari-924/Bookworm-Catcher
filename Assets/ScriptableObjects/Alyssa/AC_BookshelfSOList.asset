@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78090133f7062d0419c96d5296146b99, type: 3}
+  m_Name: AC_BookshelfSOList
+  m_EditorClassIdentifier: Assembly-CSharp::AC_BookshelfListSO
+  bookshelfSOList:
+  - {fileID: 11400000, guid: cd9331e3ca4c4084e9283e57f45a196d, type: 2}
+  - {fileID: 11400000, guid: 7c59353f555dd0942aac5b743b46c06c, type: 2}
+  - {fileID: 11400000, guid: cc90c8d389464834cb8ae0f386baa319, type: 2}
+  - {fileID: 11400000, guid: ea5d33b95976fe74cb6f9b651fae34a8, type: 2}
+  - {fileID: 11400000, guid: ba38baac6f620da4886501ff68129212, type: 2}
