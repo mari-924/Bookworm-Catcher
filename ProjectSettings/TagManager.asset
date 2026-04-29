@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ladder
   - Bookworm
+  - Slime
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,9 @@ TagManager:
   - UI
   - GroundLayer
   - Ladder
-  - 
-  - 
-  - 
+  - Projectile
+  - Hazard
+  - Player
   - 
   - 
   - 
