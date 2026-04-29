@@ -47,21 +47,23 @@ public class AC_BookshelfVisual : MonoBehaviour
 
         bookshelfEatenState = selectedBookshelf.bookshelfEatenSprites;
 
-        Debug.Log(selectedSprite);
-        // Debug.Log(bookshelfEatenState);
+        // Debug.Log(selectedSprite);
     }
 
 
     public void OnCollisionWormBookshelf(SpriteRenderer spriteRender)
     {
-        Debug.Log("change sprite");
+        //makes sure only the prefab touching the worm is changed 
+        if (spriteRender != this.gameObject.GetComponent<SpriteRenderer>())
+            return;
+        
+        // Debug.Log("change sprite");
         //changes sprite after a certain amount of collisions with worm
         //sprites should change to be slowly eaten books; should match with randomized selected sprite from start 
         switch (state)
         {
             case State.Full:
-                // selectedSprite = bookshelfEatenState[3];
-                if (wormTouchCount > 10)
+                if (wormTouchCount > UnityEngine.Random.Range(3, 6))
                 {
                     wormTouchCount = 0;
                     state = State.Half;
@@ -70,7 +72,7 @@ public class AC_BookshelfVisual : MonoBehaviour
                 break;
             case State.Half:
                 selectedSprite = bookshelfEatenState[0];
-                if (wormTouchCount > 10)
+                if (wormTouchCount > UnityEngine.Random.Range(3, 6))
                 {
                     wormTouchCount = 0;
                     state = State.Quarter;
@@ -79,7 +81,7 @@ public class AC_BookshelfVisual : MonoBehaviour
                 break;
             case State.Quarter:
                 selectedSprite = bookshelfEatenState[1];
-                if (wormTouchCount > 10)
+                if (wormTouchCount > UnityEngine.Random.Range(3, 6))
                 {
                     wormTouchCount = 0;
                     state = State.Empty;
@@ -92,6 +94,6 @@ public class AC_BookshelfVisual : MonoBehaviour
         }
 
         spriteRender.GetComponent<SpriteRenderer>().sprite = selectedSprite;
-        Debug.Log(selectedSprite);
+        // Debug.Log(selectedSprite);
     }
 }

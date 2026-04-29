@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5507972364802986889}
   - component: {fileID: 8049969200835956019}
   - component: {fileID: 2443557146833015208}
+  - component: {fileID: 5454137867305353483}
   - component: {fileID: 1971030556937967508}
   - component: {fileID: 4162808445785362056}
   m_Layer: 0
@@ -34,6 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1756994418877791090}
+  - {fileID: 1991122921520391688}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8049969200835956019
@@ -97,9 +99,32 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0016790214, y: -0.15049668}
-  m_Size: {x: 1.4419008, y: 0.3879966}
+  m_Offset: {x: -0.00167904, y: -0.30707768}
+  m_Size: {x: 1.4419011, y: 0.38286525}
   m_Direction: 1
+--- !u!114 &5454137867305353483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379112269403398562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06e2acbdd28f2d44be3fbe35190a5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WormPatrol
+  speed: 2.5
+  movingRight: 1
+  groundDetection: {fileID: 1991122921520391688}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  ladderLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  playerGameObject: {fileID: 1792990888630517839, guid: dd56f41421f6a9844b6e5965664a7083, type: 3}
+  currentState: 0
 --- !u!114 &1971030556937967508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +185,7 @@ Transform:
   m_GameObject: {fileID: 5812689021963931250}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.15, z: 0}
   m_LocalScale: {x: 6.25, y: 6.25, z: 6.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -215,7 +240,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 895940206004844934, guid: b3ab1ee5a69276e418740ec58a9baf19, type: 3}
+  m_Sprite: {fileID: -7903038568105789177, guid: b3ab1ee5a69276e418740ec58a9baf19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -225,3 +250,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &6156927438054754411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991122921520391688}
+  m_Layer: 0
+  m_Name: GroundDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1991122921520391688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156927438054754411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.675, y: -0.324, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5507972364802986889}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
