@@ -51,6 +51,7 @@ public class DepositBox : MonoBehaviour, IBookwormParent
             //Destroy bookworm once deposited
             _bookworm.DestroySelf();
             //--------------------------------------
+            
         }
     }
 

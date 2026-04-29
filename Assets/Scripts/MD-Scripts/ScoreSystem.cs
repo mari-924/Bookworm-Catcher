@@ -37,6 +37,18 @@ public class ScoreSystem : MonoBehaviour
         OnScoreChanged?.Invoke(this, EventArgs.Empty);
     }
 
+    public void SetScore(int newScore)
+    {
+        _score = Mathf.Max(0, newScore);
+        OnScoreChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    [ContextMenu("Add 100 Score (Test)")]
+    private void Add100ScoreForTest()
+    {
+        AddPoints(100);
+    }
+
     public void ResetScore()
     {
         _score = startingScore;
