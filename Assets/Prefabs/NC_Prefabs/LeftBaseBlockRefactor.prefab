@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 6014610326937984760}
   - component: {fileID: -3220705021067083769}
   - component: {fileID: 7767644678728848193}
+  - component: {fileID: -5366305686253722290}
   m_Layer: 6
   m_Name: LeftBaseBlockRefactor
   m_TagString: Untagged
@@ -250,6 +251,18 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &-5366305686253722290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920958026671347910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3159c563104d6924e8caf71feebfc51b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneWayPlatform
 --- !u!1 &5600091031696266645
 GameObject:
   m_ObjectHideFlags: 0

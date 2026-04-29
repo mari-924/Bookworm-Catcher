@@ -127,13 +127,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1458327428207015338, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
+      propertyPath: apexTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458327428207015338, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
+      propertyPath: leftWall
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458327428207015338, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
+      propertyPath: gameInput
+      value: 
+      objectReference: {fileID: 1783819182}
+    - target: {fileID: 1458327428207015338, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
+      propertyPath: rightWall
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458327428207015338, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
+      propertyPath: apexHeight
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458327428207015338, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
+      propertyPath: groundLevel
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458327428207015338, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
+      propertyPath: bookwormHoldPoint
+      value: 
+      objectReference: {fileID: 1105599832}
     - target: {fileID: 2746153665422607754, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.56
       objectReference: {fileID: 0}
     - target: {fileID: 2746153665422607754, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5137
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2746153665422607754, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -194,13 +222,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2746153665422607754, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 881599839}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7135887414987808262, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1873248899}
-    - targetCorrespondingSourceObject: {fileID: 7135887414987808262, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1873248906}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
 --- !u!1 &881599838
 GameObject:
@@ -635,7 +657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8671069642866240918, guid: 0394c17ec00cc44448c516d01e1543d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8671069642866240918, guid: 0394c17ec00cc44448c516d01e1543d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -703,7 +725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 180a63362d098774a849e19bae736033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelParser
-  levelFile: {fileID: 4900000, guid: 3a8c21691c3cd2f4496530dd7066dfd6, type: 3}
+  levelFile: {fileID: 4900000, guid: 125acb1a39273ef4d86fc67f48f4bcb6, type: 3}
   levelRoot: {fileID: 1597742679}
   basePrefab: {fileID: 4920958026671347910, guid: 9ffda563c37143c4f9176113490264a4, type: 3}
   leftBasePrefab: {fileID: 4920958026671347910, guid: 06a7d72bbb17fb74b8869e262111d2e7, type: 3}
@@ -711,7 +733,7 @@ MonoBehaviour:
   ladderPrefab: {fileID: 4920958026671347910, guid: 1c20a0845e9a961429a07aca72dbace0, type: 3}
   ladderTopPrefab: {fileID: 4920958026671347910, guid: 555783ff179f6174380b8d8e596ca0c0, type: 3}
   ladderBottomPrefab: {fileID: 4920958026671347910, guid: d7cf92186543fb744928ffa7433d5740, type: 3}
-  wormPrefab: {fileID: 2379112269403398562, guid: 469b7053b971f554da6a710e13f107ff, type: 3}
+  wormPrefab: {fileID: 2379112269403398562, guid: 9c4a26710ad39c649ba7b82bb4f71bb3, type: 3}
 --- !u!4 &1597742679
 Transform:
   m_ObjectHideFlags: 0
@@ -850,57 +872,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1873248891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7135887414987808262, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
-  m_PrefabInstance: {fileID: 51874154}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1873248899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873248891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ca9f05fc0c1ca1498b07367e285739d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerRefactor
-  gameInput: {fileID: 1783819182}
-  bookwormHoldPoint: {fileID: 1105599832}
-  baseMoveSpeed: 7
-  ladderMoveSpeed: 5
-  dropMoveSpeed: 0.5
-  apexHeight: 4
-  apexTime: 0.5
-  groundLevel: 0
-  leftWall: 0
-  rightWall: 42
---- !u!70 &1873248904 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2549679636068979994, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
-  m_PrefabInstance: {fileID: 51874154}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1873248905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2746153665422607754, guid: 76a088a1d98eaee44bc7f0ab625acbc6, type: 3}
   m_PrefabInstance: {fileID: 51874154}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1873248906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873248891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef748421296f4c94c87f64231db43f76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerOneWayPlatform
-  _playerCollider: {fileID: 1873248904}
-  _player: {fileID: 1873248899}
 --- !u!1 &1914852543
 GameObject:
   m_ObjectHideFlags: 0

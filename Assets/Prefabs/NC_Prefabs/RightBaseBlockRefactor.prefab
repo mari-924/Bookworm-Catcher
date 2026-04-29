@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6014610326937984760}
   - component: {fileID: -3220705021067083769}
   - component: {fileID: -8070617218449602725}
+  - component: {fileID: 3952837892817286105}
   m_Layer: 6
   m_Name: RightBaseBlockRefactor
   m_TagString: Untagged
@@ -159,6 +160,18 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &3952837892817286105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920958026671347910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3159c563104d6924e8caf71feebfc51b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneWayPlatform
 --- !u!1 &5342834823688723649
 GameObject:
   m_ObjectHideFlags: 0
