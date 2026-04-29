@@ -57,6 +57,16 @@ public class PausedMenu : MonoBehaviour
     SceneManager.LoadSceneAsync(optionsSceneIndex);
    }
 
+    //Restarts the current level
+    public void RestartLevel()
+    {
+        //Sets the timeScale back to 1, otherwise the restarted game will be frozen
+        Time.timeScale = 1f; 
+        
+        //This gets the name of whatever level scene we are currently in and reloads it
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     //Closes the game
    public void QuitGame(){
     Application.Quit();

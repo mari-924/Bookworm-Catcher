@@ -16,15 +16,23 @@ public class OptionsMenu : MonoBehaviour
 
     private void Awake()
     {
-        soundEffectVolumeButton.onClick.AddListener(() => {
-            SoundManager.Instance.ChangeVolume();
-            UpdateVisual();
-        });
-        musicVolumeButton.onClick.AddListener(() =>
-        {
-            MusicManager.Instance.ChangeVolume();
-            UpdateVisual();
-        });
+       // Check if buttons are assigned to avoid the error
+        if (soundEffectVolumeButton != null) {
+            soundEffectVolumeButton.onClick.AddListener(() => {
+                SoundManager.Instance.ChangeVolume();
+                UpdateVisual();
+            });
+        }
+
+        if (musicVolumeButton != null) {
+            musicVolumeButton.onClick.AddListener(() => {
+                MusicManager.Instance.ChangeVolume();
+                UpdateVisual();
+            });
+        }
+
+        //Update the visual of the volume buttons
+        UpdateVisual();
     }
 
     private void Start()
