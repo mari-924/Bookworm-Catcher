@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772ec676a34720f489796fa3eaa25342, type: 3}
+  m_Name: AC_BookshelfRight
+  m_EditorClassIdentifier: Assembly-CSharp::AC_BookshelfSO
+  spriteBase: {fileID: 1384659163609542390, guid: 1432fe60af88d184bbb7e8b25153fb0c, type: 3}
+  bookshelfEatenSprites:
+  - {fileID: -8796546123234589247, guid: 1432fe60af88d184bbb7e8b25153fb0c, type: 3}
+  - {fileID: 7108955010553071354, guid: 1432fe60af88d184bbb7e8b25153fb0c, type: 3}
+  - {fileID: -3865472328581390038, guid: 1432fe60af88d184bbb7e8b25153fb0c, type: 3}
+  - {fileID: 1384659163609542390, guid: 1432fe60af88d184bbb7e8b25153fb0c, type: 3}

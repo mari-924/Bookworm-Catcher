@@ -15,8 +15,9 @@ public class LevelParser : MonoBehaviour
     public GameObject ladderTopPrefab;
     public GameObject ladderBottomPrefab;
     public GameObject wormPrefab;
-    
 
+    public int wormCount;
+    
     void Start()
     {
         LoadLevel();
@@ -27,6 +28,11 @@ public class LevelParser : MonoBehaviour
     //     if (Keyboard.current.rKey.wasPressedThisFrame)
     //         ReloadLevel();
     // }
+
+    public int wormCountGetter()
+    {
+        return wormCount;
+    }
 
     void LoadLevel()
     {
@@ -101,10 +107,13 @@ public class LevelParser : MonoBehaviour
                     Vector3 newPostition = new Vector3(columnIndex + 0.5f, row + 0.5f, -0.5f);
                     Transform dirtInstance = Instantiate(wormPrefab, levelRoot).transform;
                     dirtInstance.position = newPostition;
+                    wormCount++;
                 }
             }
 
             row++;
         }
+
+        Debug.Log(wormCount + " worms loaded");
     }
 }

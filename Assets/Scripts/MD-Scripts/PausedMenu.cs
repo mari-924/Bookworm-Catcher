@@ -6,7 +6,7 @@ public class PausedMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pausedMenu;
     [SerializeField] private int mainMenuSceneIndex = 0;
-    [SerializeField] private int optionsSceneIndex = 2;
+    [SerializeField] private int optionsSceneIndex = 8;
     private bool hasShownMissingReferenceWarning;
 
     void Update()
@@ -53,9 +53,19 @@ public class PausedMenu : MonoBehaviour
    }
 
     //Goes to the options menu scene
-   public void OpeSettings(){
+   public void OpenSettings(){
     SceneManager.LoadSceneAsync(optionsSceneIndex);
    }
+
+    //Restarts the current level
+    public void RestartLevel()
+    {
+        //Sets the timeScale back to 1, otherwise the restarted game will be frozen
+        Time.timeScale = 1f; 
+        
+        //This gets the name of whatever level scene we are currently in and reloads it
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
     //Closes the game
    public void QuitGame(){

@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DepositBox
   bookwormHoldPoint: {fileID: 7711624787999717418}
+  pointsPerBookworm: 10
 --- !u!61 &5507490624012666380
 BoxCollider2D:
   m_ObjectHideFlags: 0
