@@ -83,11 +83,14 @@ public class GameTimer : MonoBehaviour
         UpdateGameOverScoreText(startingScore: false, finalScore: finalScore);
 
         // Reset filled star overlays so only earned stars are shown.
-        foreach (GameObject star in filledStars)
+        if (filledStars != null)
         {
-            if (star != null)
+            foreach (GameObject star in filledStars)
             {
-                star.SetActive(false);
+                if (star != null)
+                {
+                    star.SetActive(false);
+                }
             }
         }
 
