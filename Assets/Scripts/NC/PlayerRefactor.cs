@@ -468,7 +468,7 @@ public class PlayerRefactor : MonoBehaviour, IBookwormParent
     private void UpdateDeltaXMovement(float deltaX)
     {
         getMovementX = deltaX;
-        //Debug.Log(getMovementX);
+        // Debug.Log(getMovementX);
     }
 
     public float GetMovementX()
