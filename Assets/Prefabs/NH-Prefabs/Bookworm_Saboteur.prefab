@@ -262,7 +262,6 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  playerGameObject: {fileID: 0}
   bookProjectilePrefab: {fileID: 7698369315862515261, guid: ff465221f040fae40b7087fb0c8636e6, type: 3}
   slimePrefab: {fileID: 6824807038619024588, guid: 1ef7bf7fbb36a354696cc4366b5b5b99, type: 3}
   attackRate: 5

@@ -285,6 +285,25 @@ public class PlayerRefactor : MonoBehaviour, IBookwormParent
         {
             //TODO: Finish Player SetBookworm
             OnCaughtBookworm?.Invoke(this, EventArgs.Empty);
+
+            /*
+            Nick's code -----------------------------------------------------------------------
+            */
+            // Stop bookworms from moving once they are caught
+            WormPatrol wormPatrol = _bookworm.GetComponent<WormPatrol>();
+            WormAttackLadder wormAttackLadder = _bookworm.GetComponent<WormAttackLadder>();
+
+            // Check which bookworm type was caught to call the proper method
+            if (wormPatrol != null)
+            {
+                wormPatrol.BookwormCaught();
+            } else if (wormAttackLadder != null)
+            {
+                wormAttackLadder.BookwormCaught();
+            }
+            /*
+            -----------------------------------------------------------------------------------
+            */
         }
     }
 
