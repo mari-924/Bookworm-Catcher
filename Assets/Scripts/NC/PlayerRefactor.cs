@@ -48,9 +48,15 @@ public class PlayerRefactor : MonoBehaviour, IBookwormParent
     private bool _isGrounded;
     private bool _canJump;
     private bool _canDoubleJump;
+
+    //---------MARI-------------------------
+    [SerializeField] private float dashDuration = 2f;
+    [SerializeField] private float dashCooldownDuration = 5f;
+    //--------------------------------------
+
     private float _dashTimer;
     private bool _dashActive;
-    private float _dashCooldown = 5.1f;
+    private float _dashCooldownTimer;
     private bool _onLadder;
     private bool _dropping;
     
@@ -71,6 +77,10 @@ public class PlayerRefactor : MonoBehaviour, IBookwormParent
         Instance = this;
         
         _rb = GetComponent<Rigidbody2D>();
+
+        //---------MARI-------------------------
+        _dashCooldownTimer = dashCooldownDuration;
+        //--------------------------------------
     }
     
     void Start()
@@ -90,26 +100,28 @@ public class PlayerRefactor : MonoBehaviour, IBookwormParent
     void FixedUpdate()
     {
         float currentMoveSpeed = baseMoveSpeed;
-        //handle dash timer
-        _dashCooldown += Time.deltaTime;
+        //---------MARI-------------------------
+        //handle dash timer and cooldown timer
         if (_dashActive)
         {
-            if (_dashCooldown > 5f)
+            _dashTimer += Time.deltaTime;
+            currentMoveSpeed = 1.5f*baseMoveSpeed; //move twice as fast during dash
+            if (_dashTimer > dashDuration)
             {
-                _dashTimer += Time.deltaTime;
-                currentMoveSpeed = 1.5f*baseMoveSpeed; //move twice as fast during dash
-                if (_dashTimer > 2f)
-                {
-                    _dashTimer = 0f;
-                    _dashActive = false;
-                    _dashCooldown = 0f;
-                }
-            }
-            else
-            {
+                _dashTimer = 0f;
                 _dashActive = false;
+                _dashCooldownTimer = 0f;
             }
         }
+        else if (_dashCooldownTimer < dashCooldownDuration)
+        {
+            _dashCooldownTimer += Time.deltaTime;
+            if (_dashCooldownTimer > dashCooldownDuration)
+            {
+                _dashCooldownTimer = dashCooldownDuration;
+            }
+        }
+        //--------------------------------------
         //check for on ladder
         _onLadder = Physics2D.CircleCast(transform.position, .05f, Vector2.down, .05f, LayerMask.GetMask("Ladder"));
         //check for on ground/jump capability
@@ -206,6 +218,13 @@ public class PlayerRefactor : MonoBehaviour, IBookwormParent
 
     private void GameInput_OnDash(object sender, EventArgs e)
     {
+        //---------MARI-------------------------
+        if (_dashActive || _dashCooldownTimer < dashCooldownDuration)
+        {
+            return;
+        }
+        //--------------------------------------
+
         _dashActive = true;
         _dashTimer = 0f;
 
@@ -355,6 +374,48 @@ public class PlayerRefactor : MonoBehaviour, IBookwormParent
     {
         return currentState == State.Moving;
     }
+
+    //---------MARI-------------------------
+    public bool IsDashActive()
+    {
+        return _dashActive;
+    }
+
+    public bool IsDashReady()
+    {
+        return !_dashActive && _dashCooldownTimer >= dashCooldownDuration;
+    }
+
+    public float GetDashDuration()
+    {
+        return dashDuration;
+    }
+
+    public float GetDashTimeRemaining()
+    {
+        if (!_dashActive)
+        {
+            return 0f;
+        }
+
+        return Mathf.Max(0f, dashDuration - _dashTimer);
+    }
+
+    public float GetDashCooldownDuration()
+    {
+        return dashCooldownDuration;
+    }
+
+    public float GetDashCooldownTimeRemaining()
+    {
+        if (_dashActive)
+        {
+            return dashCooldownDuration;
+        }
+
+        return Mathf.Max(0f, dashCooldownDuration - _dashCooldownTimer);
+    }
+    //--------------------------------------
     //-------------------------
     
 }
