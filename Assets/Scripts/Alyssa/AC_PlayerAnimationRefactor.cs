@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class AC_PlayerAnimation : MonoBehaviour
+public class AC_PlayerAnimationRefactor : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    [SerializeField] private PlayerRefactor playerRefactor;
     [SerializeField] private Animator animator;
     private string currentAnim;
     private string currentBaseAnim;
@@ -18,28 +18,28 @@ public class AC_PlayerAnimation : MonoBehaviour
 
     private void Update()
     {
-        if (player.GetState() == Player.State.Dashing)
+        if (playerRefactor.GetState() == PlayerRefactor.State.Dashing)
         {
-            if (0 != player.GetMovementX())
+            if (0 != playerRefactor.GetMovementX())
             {
-                if (0 > player.GetMovementX())
+                if (0 > playerRefactor.GetMovementX())
                     ActionAnimation("DashLeft", "FacingLeft");
                 
-                else if (0 < player.GetMovementX())
+                else if (0 < playerRefactor.GetMovementX())
                     ActionAnimation("DashRight", "FacingRight");
             }
             
         }
         
         
-        else if(player.GetState() == Player.State.Moving || 0 != player.GetMovementX())
+        else if(playerRefactor.GetState() == PlayerRefactor.State.Moving || 0 != playerRefactor.GetMovementX())
         {        
             // if (player.GetState() != Player.State.SingleJump && player.GetState() != Player.State.DoubleJump)
             // {
-                if (0 > player.GetMovementX())
+                if (0 > playerRefactor.GetMovementX())
                     ActionAnimation("WalkingLeft", "FacingLeft");
                 
-                else if (0 < player.GetMovementX())
+                else if (0 < playerRefactor.GetMovementX())
                     ActionAnimation("WalkingRight", "FacingRight");
             // }
 
@@ -52,7 +52,7 @@ public class AC_PlayerAnimation : MonoBehaviour
         }
 
 
-        if (player.GetState() == Player.State.Idle || 0 == player.GetMovementX())
+        if (playerRefactor.GetState() == PlayerRefactor.State.Idle || 0 == playerRefactor.GetMovementX())
         {
             animator.SetBool("WalkingRight", false);
             animator.SetBool("WalkingLeft", false);
@@ -115,3 +115,4 @@ public class AC_PlayerAnimation : MonoBehaviour
     }
 
 }
+

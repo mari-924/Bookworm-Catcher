@@ -175,7 +175,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6625261062834465209, guid: 213e3410ae5d5b6429c231b5f4060d8f, type: 3}
+  m_Sprite: {fileID: 1012851691068504752, guid: 1432fe60af88d184bbb7e8b25153fb0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AC_BookshelfVisual
   bookshelfListSO: {fileID: 11400000, guid: f5db60209900aaf4bb0c62d58918a396, type: 2}
-  selectedSprite: {fileID: -6625261062834465209, guid: 213e3410ae5d5b6429c231b5f4060d8f, type: 3}
+  selectedSprite: {fileID: 1012851691068504752, guid: 1432fe60af88d184bbb7e8b25153fb0c, type: 3}
   minRange: 0
   maxRange: 3
   paperBurst: {fileID: 3762614545924652759}

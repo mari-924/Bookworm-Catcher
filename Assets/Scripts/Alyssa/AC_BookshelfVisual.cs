@@ -94,6 +94,7 @@ public class AC_BookshelfVisual : MonoBehaviour
                 }
                 if (wormTouchCount > UnityEngine.Random.Range(3, 6))
                 {
+                    //play crumbs
                     wormTouchCount = 0;
                     state = State.Empty;
                 }

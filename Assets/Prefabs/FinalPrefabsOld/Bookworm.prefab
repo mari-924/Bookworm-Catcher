@@ -121,10 +121,7 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  ladderLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  playerGameObject: {fileID: 1792990888630517839, guid: dd56f41421f6a9844b6e5965664a7083, type: 3}
+  playerGameObject: {fileID: 7135887414987808262, guid: 0c63b077ecba69147ac0bdc87be1e6be, type: 3}
   currentState: 0
 --- !u!114 &1971030556937967508
 MonoBehaviour:
