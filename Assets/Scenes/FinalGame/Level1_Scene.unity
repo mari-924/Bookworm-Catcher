@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1706e10599371cc47b127a4bb36a82bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PausedMenu
-  pauseContainer: {fileID: 1986281702}
+  pauseContainer: {fileID: 479886031}
 --- !u!1 &258076151
 GameObject:
   m_ObjectHideFlags: 0
@@ -4726,8 +4726,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1295140563}
   - {fileID: 1986281703}
+  - {fileID: 1295140563}
   - {fileID: 1604083161}
   - {fileID: 1818209833}
   - {fileID: 1992858264}
