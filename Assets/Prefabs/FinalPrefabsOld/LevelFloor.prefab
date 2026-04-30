@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6195676074243211119}
   - component: {fileID: 437736553210449796}
+  - component: {fileID: -3200864980174876862}
   - component: {fileID: 8091865172872961823}
   m_Layer: 6
   m_Name: LevelFloor
@@ -80,6 +81,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!251 &-3200864980174876862
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172441657127778903}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!114 &8091865172872961823
 MonoBehaviour:
   m_ObjectHideFlags: 0

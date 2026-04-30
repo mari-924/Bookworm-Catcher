@@ -103,14 +103,6 @@ public class WormPatrol : MonoBehaviour
         
     }
 
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Player"))
-        {
-            //touchingPlayer = false;
-        }
-    }
-
     //------Moises-------
     public StateMachine GetState()
     {
